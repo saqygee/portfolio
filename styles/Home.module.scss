@@ -1,7 +1,26 @@
+@import "./_base/mixins";
+@import "./_base/controls";
+
 .container {
   padding: 0 2rem;
+  background: url("../public/assets/images/bg.jpg");
+  background-size: cover;
 }
-
+.titleSpan {
+  display: flex;
+}
+.mainTitle {
+  margin: 16px;
+  padding: 16px;
+  color: #f8fdfe;
+}
+.mainTitleChunk {
+  color: #ffe600;
+  padding-left: 12px;
+}
+.borderLine {
+  border-left: #fff solid 1px;
+}
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -19,18 +38,12 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
 }
 
 .title a:hover,
@@ -43,6 +56,10 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  a {
+    color: #0070f3;
+    text-decoration: none;
+  }
 }
 
 .title,
@@ -108,7 +125,7 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
+@include desktop() {
   .grid {
     width: 100%;
     flex-direction: column;

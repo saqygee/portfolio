@@ -1,0 +1,11 @@
+@import '../_base/variables';
+
+.button {
+    border-radius: 12px;
+    box-shadow: none;
+    color: $black;
+    font-size: x-large;
+    background-color:$secondary-color;
+    padding: 16px;
+    border-width: 0px;
+}
